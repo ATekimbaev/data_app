@@ -15,6 +15,12 @@ class Prefs extends ChangeNotifier {
     notifyListeners();
   }
 
+  void increment1() async {
+    counter++;
+    await prefs?.setInt('counter', counter);
+    notifyListeners();
+  }
+
   void initPrefs() async {
     prefs = await SharedPreferences.getInstance();
   }
