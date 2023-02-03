@@ -18,4 +18,8 @@ class Prefs extends ChangeNotifier {
   void initPrefs() async {
     prefs = await SharedPreferences.getInstance();
   }
+
+  void initPrefs1() async {
+    prefs = await SharedPreferences.getInstance();
+  }
 }
